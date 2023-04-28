@@ -1,0 +1,118 @@
+{
+  "project_info": {
+    "project_number": "1007870535057",
+    "project_id": "flutter-firebase-integra-9f0f8",
+    "storage_bucket": "flutter-firebase-integra-9f0f8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1007870535057:android:3ad1b4f909582fd5aa2630",
+        "android_client_info": {
+          "package_name": "com.example.complete"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1007870535057-1mdbkrb3ldpn1egrmgjodtuojum2k29c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAhfyyFxjaRYZiHWgot7DaJ9mOeKBu7rlY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1007870535057-1mdbkrb3ldpn1egrmgjodtuojum2k29c.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1007870535057-1db9386ksetmfb557er76c0a5maju71o.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.mdc100Series"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1007870535057:android:6f2019affb4eb883aa2630",
+        "android_client_info": {
+          "package_name": "com.example.flutter_firebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1007870535057-1mdbkrb3ldpn1egrmgjodtuojum2k29c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAhfyyFxjaRYZiHWgot7DaJ9mOeKBu7rlY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1007870535057-1mdbkrb3ldpn1egrmgjodtuojum2k29c.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1007870535057-1db9386ksetmfb557er76c0a5maju71o.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.mdc100Series"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1007870535057:android:83353d97bb87eba6aa2630",
+        "android_client_info": {
+          "package_name": "com.example.shrine"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1007870535057-1mdbkrb3ldpn1egrmgjodtuojum2k29c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAhfyyFxjaRYZiHWgot7DaJ9mOeKBu7rlY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1007870535057-1mdbkrb3ldpn1egrmgjodtuojum2k29c.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1007870535057-1db9386ksetmfb557er76c0a5maju71o.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.mdc100Series"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
