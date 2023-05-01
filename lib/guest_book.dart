@@ -1,14 +1,20 @@
+// ignore_for_file: prefer_const_literals_to_create_immutables
+
 import 'dart:async';
 import 'package:flutter/material.dart';
 
+import 'guest_book_message.dart';
 import 'src/widgets.dart';
 
 class GuestBook extends StatefulWidget {
   const GuestBook({
-    required this.addMessage,
     super.key,
+    required this.addMessage,
+    required this.messages,
   });
+
   final FutureOr<void> Function(String message) addMessage;
+  final List<GuestBookMessage> messages;
 
   @override
   State<GuestBook> createState() => _GuestBookState();
@@ -18,34 +24,40 @@ class _GuestBookState extends State<GuestBook> {
   final _formKey = GlobalKey<FormState>(debugLabel: '_GuestBookState');
   final _controller = TextEditingController();
 
+//TODO: pick up on step 7 where we are modifying the _GuestBookState to allow for the messages
+
   @override
   Widget build(BuildContext context) {
-    return Padding(
-        padding: const EdgeInsets.all(8),
-        child: Form(
-          key: _formKey,
-          child: Row(
-            children: [
-              Expanded(
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Padding(
+          padding: const EdgeInsets.all(8),
+          child: Form(
+            key: _formKey,
+            child: Row(
+              children: [
+                Expanded(
                   child: TextFormField(
-                controller: _controller,
-                decoration: const InputDecoration(
-                  hintText: 'Leave a message',
+                    controller: _controller,
+                    decoration: const InputDecoration(
+                      hintText: 'Leave a message',
+                    ),
+                    validator: (value) {
+                      if (value == null || value.isEmpty) {
+                        return 'enter your message to continue';
+                      }
+                      return null;
+                    },
+                  ),
                 ),
-                validator: (value) {
-                  if (value == null || value.isEmpty) {
-                    return 'enter your message to continue';
-                  }
-                  return null;
-                },
-              )),
-              const SizedBox(width: 8),
-              StyledButton(
+                const SizedBox(width: 8),
+                StyledButton(
                   child: Row(
                     children: [
-                      Icon(Icons.send),
-                      SizedBox(width: 4),
-                      Text('Send'),
+                      const Icon(Icons.send),
+                      const SizedBox(width: 4),
+                      const Text('Send'),
                     ],
                   ),
                   onPressed: () async {
@@ -53,9 +65,21 @@ class _GuestBookState extends State<GuestBook> {
                       await widget.addMessage(_controller.text);
                       _controller.clear();
                     }
-                  })
-            ],
+                  },
+                ),
+              ],
+            ),
           ),
-        ));
+        ),
+        const SizedBox(
+          height: 8,
+        ),
+        for (var message in widget.messages)
+          Paragraph('${message.name}: ${message.message}'),
+        const SizedBox(
+          height: 8,
+        ),
+      ],
+    );
   }
 }
