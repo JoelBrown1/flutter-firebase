@@ -15,6 +15,7 @@ class AuthFunc extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print('Auth - value in loggedIn: ${loggedIn}');
     return Row(
       children: [
         Padding(
